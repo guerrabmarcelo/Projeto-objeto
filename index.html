@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .fundo {
+            background-color: black;
+            background-size: cover;
+        }
+
+        .conteudo {
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .quadrado {
+            max-width: 55%;
+
+        }
+
+        .caixa-de-codigo {
+            position: relative;
+            background-color: black;
+            color: whitesmoke;
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .javascript {
+            background-color: black;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 25%;
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.5;
+            color: black;
+            text-align: justify;
+
+        }
+
+        h3 {
+            font-size: 25px;
+            font-weight: bold;
+            color: black;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body class="fundo">
+    <div class="separar">
+        <div class="conteudo">
+            <div class="quadrado">
+                <h1>
+                    Introdução à Objeto em JavaScript
+                </h1>
+                <br>
+                <h3 class="titulo">
+                    O que são?
+                </h3>
+                <p class="texto">
+                    Objeto é uma das estruturas de dados mais importantes em JavaScript<br>
+                    Em JavaScript, objetos são coleções de
+                    pares chave-valor.<br>
+                    Os objetos permitem armazenar informações
+                    relacionadas em uma única entidade.
+                </p>
+
+                <pre class="caixa-de-codigo" onclick="copiarCodigo()">
+                    <code class="javascript">
+                        // Exemplo de objeto em JavaScript
+                        let carro = {
+                          marca: "Toyota",
+                          modelo: "Corolla",
+                          ano: 2022,
+                          cor: "prata",
+                          ligar: function() {
+                            console.log("O carro está ligado!");
+                          },
+                          desligar: function() {
+                            console.log("O carro está desligado!");
+                          }
+                        };
+                    </code>
+                  </pre>
+                <p>
+                    Os objetos são usados para modelar
+                    entidades do mundo real e abstratas em
+                    código.</p>
+            </div>
+        </div>
+        <div class="conteudo">
+            <div class="quadrado">
+                <h3 class="Subtitulo">
+                    <br>
+                    Propriedades de objetos
+                </h3>
+                <p class="texto">
+                    Os objetos em JavaScript são compostos por
+                    pares de chave-valor.
+                    Cada propriedade de um objeto consiste em
+                    uma chave (também chamada de nome da
+                    propriedade) e um valor.<br>
+                    Acessamos as propriedades de um objeto
+                    usando a notação de ponto (.) ou a notação de
+                    colchetes ([]).
+                </p>
+                <p>Exemplo de acesso às propriedades de um
+                    objeto:</p>
+
+                <pre class="caixa-de-codigo" onclick="copiarCodigo()">
+                    <code class="javascript">
+                        let pessoa = {
+                            nome: "João",
+                            idade: 25,
+                            profissao: "Engenheiro"
+                          };
+                          
+                          console.log(pessoa.nome); // Saída: João
+                          console.log(pessoa['idade']); // Saída: 25
+                    </code>
+                  </pre>
+                <p class="texto">
+                    Podemos adicionar, modificar e excluir
+                    propriedades de um objeto em tempo de
+                    execução.
+                </p>
+            </div>
+        </div>
+        <div class="conteudo">
+            <div class="quadrado">
+                <h3 class="titulo">
+                    <br>
+                    Métodos de objetos
+                </h3>
+                <p class="texto">
+                    Além de propriedades, os objetos em
+                    JavaScript também podem conter
+                    métodos.<br>
+                    Um método é uma função que está
+                    associada a um objeto e pode ser
+                    chamada para executar uma ação
+                    específica.
+                </p>
+                <pre class="caixa-de-codigo" onclick="copiarCodigo()">
+                    <code class="javascript">
+                        let pessoa = {
+                            nome: "Maria",
+                            idade: 30,
+                            saudacao: function() {
+                              console.log("Olá! Meu nome é " + this.nome + " e tenho " + this.idade + " anos.");
+                            }
+                          };
+                          
+                          pessoa.saudacao(); // Saída: Olá! Meu nome é Maria e tenho 30 anos.
+                          
+                    </code>
+                  </pre>
+                <p class="texto">
+                    Dentro de um método, a palavra-chave
+                    this se refere ao próprio objeto que o
+                    contém.<br>
+                    Os métodos podem ser chamados da
+                    mesma forma que as propriedades,
+                    usando a notação de ponto (.) ou a
+                    notação de colchetes ([]).
+                </p>
+                <h3 class="titulo">
+                    <br>
+                    <br>
+                    Criação de Objetos
+                </h3>
+                <p class="texto">
+                    Em JavaScript, existem várias maneiras de criar objetos:<br>
+                    <strong style="color:black">Sintaxe literal:</strong> Podemos criar objetos
+                    usando a sintaxe de chaves ({}) e
+                    definindo as propriedades e valores
+                    diretamente.<br>
+                    Exemplo de criação de objeto usando
+                    sintaxe literal:
+                </p>
+                <pre class="caixa-de-codigo" onclick="copiarCodigo()">
+                    <code class="javascript">
+                        let pessoa = {
+                            nome: "Ana",
+                            idade: 28,
+                            profissao: "Advogada"
+                          };
+                    </code>
+                  </pre>
+                <p class="texto">
+                    <strong style="color:black">Função construtora</strong> Podemos criar
+                    objetos usando uma função construtora
+                    e o operador new.<br>
+                    Exemplo de criação de objeto usando
+                    função construtora:
+                </p>
+                <pre class="caixa-de-codigo" onclick="copiarCodigo()">
+                    <code class="javascript">
+                        function Pessoa(nome, idade, profissao) {
+                            this.nome = nome;
+                            this.idade = idade;
+                            this.profissao = profissao;
+                          }
+                          
+                          let pessoa = new Pessoa("Pedro", 35, "Engenheiro");                          
+                    </code>
+                  </pre>
+                <p class="texto">
+                    <strong style="color:black">Classe:</strong> A partir do ECMAScript 2015
+                    (ES6), também podemos criar objetos
+                    usando a sintaxe de classe em
+                    JavaScript.
+                    <br>
+                    Exemplo de criação de objeto usando
+                    classe:
+                </p>
+                <pre class="caixa-de-codigo" onclick="copiarCodigo()">
+                    <code class="javascript">
+                        class Pessoa {
+                            constructor(nome, idade, profissao) {
+                              this.nome = nome;
+                              this.idade = idade;
+                              this.profissao = profissao;
+                            }
+                          }
+                          
+                          let pessoa = new Pessoa("Mariana", 32, "Médica");                                                    
+                    </code>
+                  </pre>
+                <h3 class="titulo">
+                    <br>
+                    <br>
+                    Protótipos
+                </h3>
+                <p class="texto">
+                    Em JavaScript, protótipo é um mecanismo que permite a herança entre objetos.<br>
+                    É um mecanismo que permite a herança entre
+                    objetos.<br>
+                    Cada objeto em JavaScript tem um
+                    protótipo, exceto o objeto raiz
+                    (Object.prototype).<br>
+                    Um objeto herda propriedades e
+                    métodos de seu protótipo.<br>
+                    A herança de protótipos permite
+                    compartilhar propriedades e métodos
+                    com eficiência entre objetos.<br>
+                    Os métodos são definidos como
+                    propriedades que possuem valores de
+                    função.
+                </p>
+                <pre class="caixa-de-codigo" onclick="copiarCodigo()">
+                    <code class="javascript">
+                    // Objeto protótipo
+                    let animal = {
+                    fazerBarulho: function() {
+                        console.log("O animal faz barulho.");
+                    }
+                    };
+
+                    // Objeto que herda do protótipo
+                    let cachorro = Object.create(animal);
+                    cachorro.fazerBarulho(); // Saída: O animal faz barulho.                                                    
+                    </code>
+                  </pre>
+                <h3 class="titulo">
+                    <br>
+                    <br>
+                    Iteração de Objetos
+                </h3>
+                <p class="texto">
+                    Em JavaScript, podemos percorrer as propriedades de um objeto usando loops e métodos
+                    específicos.<br>
+                    Loop for...in: Podemos usar o loop for...in
+                    para iterar sobre as propriedades de um
+                    objeto.
+                </p>
+                <pre class="caixa-de-codigo" onclick="copiarCodigo()">
+                    <code class="javascript">
+                        let pessoa = {
+                            nome: "Ana",
+                            idade: 28,
+                            profissao: "Advogada"
+                          };
+                          
+                          for (let propriedade in pessoa) {
+                            console.log(propriedade + ": " + pessoa[propriedade]);
+                          }                                                                              
+                    </code>
+                  </pre>
+                <h3 class="titulo">
+                    <br>
+                    <br>
+                    JSON (JAVASCRIPT OBJECT NOTATION)
+                </h3>
+                <p class="texto">
+                    JSON é um formato de dados popular utilizado para troca de informações estruturadas<br>
+                    JSON é baseado na sintaxe de objetos em JavaScript.<br>
+                    Em JavaScript, podemos converter
+                    objetos em JSON usando o método
+                    JSON.stringify().
+                </p>
+                <pre class="caixa-de-codigo" onclick="copiarCodigo()">
+                    <code class="javascript">
+                        let pessoa = {
+                            nome: "Maria",
+                            idade: 30,
+                            profissao: "Advogada"
+                          };
+                          
+                          let jsonPessoa = JSON.stringify(pessoa);
+                          console.log(jsonPessoa); // Saída: '{"nome":"Maria","idade":30,"profissao":"Advogada"}'                                                                                                        
+                    </code>
+                  </pre>
+                <p class="texto">
+                    Em JavaScript, podemos converter JSON
+                    em objetos usando o método
+                    JSON.parse()
+                </p>
+                <pre class="caixa-de-codigo" onclick="copiarCodigo()">
+                    <code class="javascript">
+                let jsonPessoa = '{"nome":"Maria","idade":30,"profissao":"Advogada"}';
+
+                let pessoa = JSON.parse(jsonPessoa);
+                console.log(pessoa.nome); // Saída: Maria
+            </code>
+        </pre>
+                <p class="texto">
+                    JSON é amplamente utilizado para
+                    comunicação de dados entre servidores
+                    e clientes.
+
+                </p>
+                <h3 class="titulo">
+                    <br>
+                    <br>
+                    Objeto como atributo de objeto
+                </h3>
+                <p class="texto">
+                    Em JavaScript, é possível ter objetos como atributos de outros objetos, o que nos permite criar
+                    estruturas mais complexas e aninhadas.<br>
+                    Veja um exemplo de objeto que possui um
+                    objeto como atributo:
+                </p>
+                <pre class="caixa-de-codigo" onclick="copiarCodigo()">
+                    <code class="javascript">
+                        let pessoa = {
+                            nome: "João",
+                            endereco: {
+                              rua: "Rua A",
+                              numero: 123,
+                              cidade: "São Paulo"
+                            },
+                            idade: 30
+                          };
+                                                                                                                                  
+                    </code>
+                  </pre>
+                <p class="texto">
+                    Nesse exemplo, o objeto pessoa
+                    possui três atributos: nome,
+                    endereco e idade. O atributo
+                    endereco é por si só outro objeto,
+                    contendo os atributos rua, numero
+                    e cidade.
+                </p>
+                <p class="texto">
+                    Podemos acessar os atributos de um objeto
+                    aninhado utilizando a notação de ponto ou a
+                    notação de colchetes:
+                </p>
+                <pre class="caixa-de-codigo" onclick="copiarCodigo()">
+                    <code class="javascript">
+                    console.log(pessoa.nome); // Saída: João
+                    console.log(pessoa.endereco.rua); // Saída: Rua A
+                    console.log(pessoa["endereco"]["cidade"]); // Saída: São Paulo
+                                                                                                      
+                    </code>
+                  </pre>
+
+            </div>
+        </div>
+
+
+</body>
+
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+</html>
